@@ -481,7 +481,7 @@ function showSuccessToast() {
 
         hideSuccessToast();
 
-    }, 5000);
+    }, 10000);
 
 }
 

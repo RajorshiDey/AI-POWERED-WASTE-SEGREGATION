@@ -5,17 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>EcoSort — Smart Waste Segregation</title>
+    <title>BinView — Smart Waste Segregation</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -35,23 +31,16 @@
             <div class="logo">
 
                 <div class="logo-icon">
-                    ♻
                 </div>
 
                 <span>
-                    EcoSort
+                    BinView
                 </span>
 
             </div>
 
 
-            <div class="status">
 
-                <span class="status-dot"></span>
-
-                AI Classification Online
-
-            </div>
 
         </header>
 
@@ -69,7 +58,7 @@
 
             <h1>
 
-                Put waste in the
+                Know your waste. Choose the
 
                 <span>
                     right bin.
@@ -78,10 +67,10 @@
             </h1>
 
 
-            <p>
+            <p id="tag">
 
-                Describe your waste and let AI determine
-                the correct dustbin colour for disposal.
+                <span class="tag-size">Confused</span> about which bin to choose? <br>
+                Tell us what you’re throwing away, and <span class="tag-size">BinView</span> will show you where it belongs.
 
             </p>
 
@@ -104,10 +93,7 @@
                     </h2>
 
 
-                    <span
-                        class="char-count"
-                        id="charCount"
-                    >
+                    <span class="char-count" id="charCount">
                         0 / 500
                     </span>
 
@@ -116,53 +102,35 @@
 
                 <!-- Text Input -->
 
-                <textarea
-                    id="wasteInput"
-                    maxlength="500"
-                    placeholder="Example: A used plastic water bottle..."
-                ></textarea>
+                <textarea id="wasteInput" maxlength="500"
+                    placeholder="Example: A used plastic water bottle..."></textarea>
 
 
                 <!-- Example Buttons -->
 
                 <div class="examples">
 
-                    <button
-                        class="example"
-                        data-value="A used plastic water bottle"
-                    >
+                    <button class="example" data-value="A used plastic water bottle">
                         Plastic bottle
                     </button>
 
 
-                    <button
-                        class="example"
-                        data-value="Leftover vegetable and fruit peels"
-                    >
+                    <button class="example" data-value="Leftover vegetable and fruit peels">
                         Vegetable peels
                     </button>
 
 
-                    <button
-                        class="example"
-                        data-value="An old broken mobile phone"
-                    >
+                    <button class="example" data-value="An old broken mobile phone">
                         Broken phone
                     </button>
 
 
-                    <button
-                        class="example"
-                        data-value="Used tissue paper"
-                    >
+                    <button class="example" data-value="Used tissue paper">
                         Tissue paper
                     </button>
 
 
-                    <button
-                        class="example"
-                        data-value="An empty glass bottle"
-                    >
+                    <button class="example" data-value="An empty glass bottle">
                         Glass bottle
                     </button>
 
@@ -171,13 +139,10 @@
 
                 <!-- Classify Button -->
 
-                <button
-                    class="classify-btn"
-                    id="classifyBtn"
-                >
+                <button class="classify-btn" id="classifyBtn">
 
                     <span id="buttonText">
-                        Find Dustbin →
+                        View Bin →
                     </span>
 
                 </button>
@@ -185,10 +150,7 @@
 
                 <!-- Loader -->
 
-                <div
-                    class="loader"
-                    id="loader"
-                >
+                <div class="loader" id="loader">
 
                     <span></span>
                     <span></span>
@@ -203,18 +165,12 @@
 
                 <!-- Error -->
 
-                <div
-                    class="error"
-                    id="errorBox"
-                ></div>
+                <div class="error" id="errorBox"></div>
 
 
                 <!-- ================= RESULT ================= -->
 
-                <section
-                    class="result"
-                    id="result"
-                >
+                <section class="result" id="result">
 
                     <div class="result-card">
 
@@ -228,10 +184,7 @@
                             </div>
 
 
-                            <div
-                                class="dustbin-title"
-                                id="binName"
-                            >
+                            <div class="dustbin-title" id="binName">
                                 —
                             </div>
 
@@ -242,10 +195,7 @@
 
                         <div class="bin-display">
 
-                            <div
-                                class="bin-circle"
-                                id="binColor"
-                            >
+                            <div class="bin-circle" id="binColor">
 
                                 <span>
                                     ♻
@@ -261,10 +211,7 @@
                                 </div>
 
 
-                                <div
-                                    class="color-name"
-                                    id="colorName"
-                                >
+                                <div class="color-name" id="colorName">
                                     —
                                 </div>
 
@@ -370,33 +317,29 @@
     </div>
 
     <!-- SUCCESS TOAST -->
-<div class="toast" id="successToast">
+    <div class="toast" id="successToast">
 
-    <div class="toast-icon">
-        ✓
+        <div class="toast-icon">
+            ✓
+        </div>
+
+        <div class="toast-content">
+
+            <strong>
+                Congratulations! 🌱
+            </strong>
+
+            <span>
+                You're helping keep the environment clean.
+            </span>
+
+        </div>
+
+        <button class="toast-close" id="toastClose" aria-label="Close notification">
+            ×
+        </button>
+
     </div>
-
-    <div class="toast-content">
-
-        <strong>
-            Congratulations! 🌱
-        </strong>
-
-        <span>
-            You're helping keep the environment clean.
-        </span>
-
-    </div>
-
-    <button
-        class="toast-close"
-        id="toastClose"
-        aria-label="Close notification"
-    >
-        ×
-    </button>
-
-</div>
 
     <script src="script.js"></script>
 

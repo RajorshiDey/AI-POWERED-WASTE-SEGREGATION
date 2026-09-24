@@ -49,7 +49,7 @@ body {
     color: var(--text);
 
     background:
-        #06120b;
+        #06120ba1;
 
     overflow-x: hidden;
 
@@ -70,14 +70,11 @@ body {
 
     background-image:
 
-        linear-gradient(
-            rgba(3, 15, 9, 0.78),
-            rgba(3, 15, 9, 0.90)
-        ),
+        linear-gradient(rgba(3, 15, 9, 0.747),
+            rgba(3, 15, 9, 0.829)),
 
-        url(
-            "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=2400&q=85"
-        );
+        url(background.png
+);
 
     background-size: cover;
 
@@ -102,12 +99,22 @@ body {
 
     background:
 
-        radial-gradient(
-            circle at 50% 25%,
+        radial-gradient(circle at 50% 25%,
             rgba(56, 190, 108, 0.13),
-            transparent 35%
-        );
+            transparent 35%);
 
+}
+
+
+
+.tag-size {
+    font-size: 24px;
+    font-weight: bold;
+    color: lightskyblue;
+}
+
+#tag {
+    font-size: 0.98rem;
 }
 
 
@@ -122,6 +129,8 @@ body {
     margin: auto;
 
 }
+
+
 
 
 /* =========================================
@@ -167,22 +176,13 @@ header {
 
     border-radius: 13px;
 
-    background:
+    background-image: url("./favicon.png");
+    background-size: cover;
 
-        linear-gradient(
-            135deg,
-            var(--primary),
-            var(--primary-dark)
-        );
-
-    color: #06150c;
+    /* color: #06150c; */
 
     font-size: 21px;
 
-    box-shadow:
-
-        0 8px 30px
-        rgba(47, 191, 113, 0.25);
 
 }
 
@@ -244,8 +244,7 @@ header {
         rgba(110, 231, 160, 0.08);
 
     border:
-        1px solid
-        rgba(110, 231, 160, 0.2);
+        1px solid rgba(110, 231, 160, 0.2);
 
     color: var(--primary);
 
@@ -267,11 +266,9 @@ header {
     margin: auto;
 
     font-size:
-        clamp(
-            2.6rem,
+        clamp(2.6rem,
             7vw,
-            5.3rem
-        );
+            5.3rem);
 
     line-height: 0.96;
 
@@ -318,28 +315,27 @@ header {
 
     background:
 
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.18),
-            rgba(255,255,255,0.03)
-        );
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0));
 
     box-shadow:
 
-        0 30px 80px
-        rgba(0, 0, 0, 0.35);
+        0 30px 80px rgba(0, 0, 0, 0.35);
 
 }
 
 
 .classifier-inner {
 
+    background: rgb(7 20 13 / 44%);
+
     padding: 28px;
 
     border-radius: 27px;
 
-    background:
-        var(--card);
+    /* background:
+        var(--card); */
 
     backdrop-filter:
         blur(20px);
@@ -405,7 +401,7 @@ textarea {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.045);
+        rgba(255, 255, 255, 0.045);
 
     color: var(--text);
 
@@ -430,12 +426,11 @@ textarea::placeholder {
 textarea:focus {
 
     border-color:
-        rgba(110,231,160,0.45);
+        rgba(110, 231, 160, 0.45);
 
     box-shadow:
 
-        0 0 0 4px
-        rgba(110,231,160,0.06);
+        0 0 0 4px rgba(110, 231, 160, 0.06);
 
 }
 
@@ -467,7 +462,7 @@ textarea:focus {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.035);
+        rgba(255, 255, 255, 0.035);
 
     color: var(--muted);
 
@@ -487,7 +482,7 @@ textarea:focus {
     color: var(--primary);
 
     border-color:
-        rgba(110,231,160,0.35);
+        rgba(110, 231, 160, 0.35);
 
     transform:
         translateY(-2px);
@@ -513,11 +508,9 @@ textarea:focus {
 
     background:
 
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--primary),
-            var(--primary-dark)
-        );
+            var(--primary-dark));
 
     color: #041109;
 
@@ -541,8 +534,7 @@ textarea:focus {
 
     box-shadow:
 
-        0 12px 35px
-        rgba(47,191,113,0.25);
+        0 12px 35px rgba(47, 191, 113, 0.25);
 
 }
 
@@ -588,7 +580,7 @@ textarea:focus {
 }
 
 
-.loader > span:not(.loader-text) {
+.loader>span:not(.loader-text) {
 
     width: 7px;
     height: 7px;
@@ -603,14 +595,14 @@ textarea:focus {
 }
 
 
-.loader > span:nth-child(2) {
+.loader>span:nth-child(2) {
 
     animation-delay: 0.15s;
 
 }
 
 
-.loader > span:nth-child(3) {
+.loader>span:nth-child(3) {
 
     animation-delay: 0.3s;
 
@@ -646,11 +638,10 @@ textarea:focus {
     border-radius: 13px;
 
     border:
-        1px solid
-        rgba(255,100,100,0.2);
+        1px solid rgba(255, 100, 100, 0.2);
 
     background:
-        rgba(255,100,100,0.07);
+        rgba(255, 100, 100, 0.07);
 
     color: #ff9d9d;
 
@@ -726,7 +717,7 @@ textarea:focus {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.035);
+        rgba(255, 255, 255, 0.035);
 
 }
 
@@ -797,16 +788,14 @@ textarea:focus {
     border-radius: 50%;
 
     border:
-        6px solid
-        rgba(255,255,255,0.14);
+        6px solid rgba(255, 255, 255, 0.14);
 
     color: white;
 
     font-size: 42px;
 
     box-shadow:
-        0 0 50px
-        rgba(255,255,255,0.15);
+        0 0 50px rgba(255, 255, 255, 0.15);
 
     transition:
         background 0.5s,
@@ -924,8 +913,7 @@ textarea:focus {
     border:
         1px solid var(--border);
 
-    background:
-        rgba(5,18,11,0.65);
+    background: rgb(5 18 11 / 0%);
 
     backdrop-filter:
         blur(15px);
@@ -974,8 +962,7 @@ footer {
     text-align: center;
 
     border-top:
-        1px solid
-        rgba(255,255,255,0.06);
+        1px solid rgba(255, 255, 255, 0.06);
 
     color: #617268;
 
@@ -1153,10 +1140,8 @@ footer span {
 
     bottom: 25px;
 
-    width: min(
-        380px,
-        calc(100% - 30px)
-    );
+    width: min(380px,
+            calc(100% - 30px));
 
     display: flex;
 
@@ -1172,16 +1157,13 @@ footer span {
         rgba(8, 27, 16, 0.92);
 
     border:
-        1px solid
-        rgba(110, 231, 160, 0.25);
+        1px solid rgba(110, 231, 160, 0.25);
 
     box-shadow:
 
-        0 20px 60px
-        rgba(0, 0, 0, 0.4),
+        0 20px 60px rgba(0, 0, 0, 0.4),
 
-        0 0 30px
-        rgba(47, 191, 113, 0.08);
+        0 0 30px rgba(47, 191, 113, 0.08);
 
     backdrop-filter:
         blur(20px);
@@ -1199,12 +1181,10 @@ footer span {
     visibility: hidden;
 
     transition:
-        transform 0.45s cubic-bezier(
-            0.22,
+        transform 0.45s cubic-bezier(0.22,
             1,
             0.36,
-            1
-        ),
+            1),
         opacity 0.35s ease,
         visibility 0.35s ease;
 
@@ -1245,11 +1225,9 @@ footer span {
 
     background:
 
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--primary),
-            var(--primary-dark)
-        );
+            var(--primary-dark));
 
     color: #06150c;
 
@@ -1259,8 +1237,7 @@ footer span {
 
     box-shadow:
 
-        0 0 20px
-        rgba(110, 231, 160, 0.2);
+        0 0 20px rgba(110, 231, 160, 0.2);
 
 }
 
@@ -1319,7 +1296,7 @@ footer span {
     border-radius: 50%;
 
     background:
-        rgba(255,255,255,0.05);
+        rgba(255, 255, 255, 0.05);
 
     color: var(--muted);
 
@@ -1337,7 +1314,7 @@ footer span {
 .toast-close:hover {
 
     background:
-        rgba(255,255,255,0.1);
+        rgba(255, 255, 255, 0.1);
 
     color: white;
 
