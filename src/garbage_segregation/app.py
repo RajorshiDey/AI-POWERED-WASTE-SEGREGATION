@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from garbage_segregation.schemas import Request
-from garbage_segregation.llm import llm_call
+from src.garbage_segregation.schemas import Request
+from src.garbage_segregation.llm import llm_call
 
 app = FastAPI()
 

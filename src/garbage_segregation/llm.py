@@ -1,6 +1,6 @@
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
-from garbage_segregation.schemas import AIResponse, Response
+from src.garbage_segregation.schemas import AIResponse, Response
 
 load_dotenv()
 
