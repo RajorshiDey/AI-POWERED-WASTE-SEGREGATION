@@ -1,0 +1,7 @@
+langchain
+langchain-groq
+fastapi
+python-dotenv
+pydantic
+typing
+uvicorn

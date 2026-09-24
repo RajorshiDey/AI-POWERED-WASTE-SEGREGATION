@@ -27,7 +27,7 @@ def llm_call(query: str) -> Response:
         "special-care": "red"
     }
 
-    result["dustbin_colour"] = COLOUR_MAP[result["category"]]
+    result["dustbin_colour"] = COLOUR_MAP[result["category"]] 
 
     return result
 
