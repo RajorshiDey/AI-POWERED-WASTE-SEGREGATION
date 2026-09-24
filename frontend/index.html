@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoSort — Smart Waste Segregation</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- Background overlay -->
+    <div class="background-overlay"></div>
+
+
+    <div class="page">
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    ♻
+                </div>
+
+                <span>
+                    EcoSort
+                </span>
+
+            </div>
+
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                AI Classification Online
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="badge">
+
+                ✦ AI-POWERED WASTE SEGREGATION
+
+            </div>
+
+
+            <h1>
+
+                Put waste in the
+
+                <span>
+                    right bin.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Describe your waste and let AI determine
+                the correct dustbin colour for disposal.
+
+            </p>
+
+        </section>
+
+
+        <!-- ================= CLASSIFIER ================= -->
+
+        <main class="classifier">
+
+            <div class="classifier-inner">
+
+
+                <!-- Input Header -->
+
+                <div class="input-header">
+
+                    <h2>
+                        Describe your waste
+                    </h2>
+
+
+                    <span
+                        class="char-count"
+                        id="charCount"
+                    >
+                        0 / 500
+                    </span>
+
+                </div>
+
+
+                <!-- Text Input -->
+
+                <textarea
+                    id="wasteInput"
+                    maxlength="500"
+                    placeholder="Example: A used plastic water bottle..."
+                ></textarea>
+
+
+                <!-- Example Buttons -->
+
+                <div class="examples">
+
+                    <button
+                        class="example"
+                        data-value="A used plastic water bottle"
+                    >
+                        Plastic bottle
+                    </button>
+
+
+                    <button
+                        class="example"
+                        data-value="Leftover vegetable and fruit peels"
+                    >
+                        Vegetable peels
+                    </button>
+
+
+                    <button
+                        class="example"
+                        data-value="An old broken mobile phone"
+                    >
+                        Broken phone
+                    </button>
+
+
+                    <button
+                        class="example"
+                        data-value="Used tissue paper"
+                    >
+                        Tissue paper
+                    </button>
+
+
+                    <button
+                        class="example"
+                        data-value="An empty glass bottle"
+                    >
+                        Glass bottle
+                    </button>
+
+                </div>
+
+
+                <!-- Classify Button -->
+
+                <button
+                    class="classify-btn"
+                    id="classifyBtn"
+                >
+
+                    <span id="buttonText">
+                        Find Dustbin →
+                    </span>
+
+                </button>
+
+
+                <!-- Loader -->
+
+                <div
+                    class="loader"
+                    id="loader"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span class="loader-text">
+                        Analyzing waste...
+                    </span>
+
+                </div>
+
+
+                <!-- Error -->
+
+                <div
+                    class="error"
+                    id="errorBox"
+                ></div>
+
+
+                <!-- ================= RESULT ================= -->
+
+                <section
+                    class="result"
+                    id="result"
+                >
+
+                    <div class="result-card">
+
+
+                        <!-- Result Header -->
+
+                        <div class="result-heading">
+
+                            <div class="result-label">
+                                YOUR WASTE BELONGS IN
+                            </div>
+
+
+                            <div
+                                class="dustbin-title"
+                                id="binName"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <!-- Large Bin Colour -->
+
+                        <div class="bin-display">
+
+                            <div
+                                class="bin-circle"
+                                id="binColor"
+                            >
+
+                                <span>
+                                    ♻
+                                </span>
+
+                            </div>
+
+
+                            <div class="bin-info">
+
+                                <div class="bin-color-label">
+                                    Dustbin Colour
+                                </div>
+
+
+                                <div
+                                    class="color-name"
+                                    id="colorName"
+                                >
+                                    —
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Explanation -->
+
+                        <div class="reason">
+
+                            <h3>
+                                Why?
+                            </h3>
+
+
+                            <p id="reasonText">
+                                —
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+
+        <!-- ================= INFO ================= -->
+
+        <section class="info-grid">
+
+
+            <div class="info-card">
+
+
+                <h3>
+                    AI Powered
+                </h3>
+
+
+                <p>
+                    Describe your waste naturally and
+                    let the AI determine the appropriate
+                    disposal bin.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+
+                <h3>
+                    Colour Based
+                </h3>
+
+
+                <p>
+                    Get a clear dustbin colour instead of
+                    guessing where your waste belongs.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+
+
+                <h3>
+                    Dispose Better
+                </h3>
+
+
+                <p>
+                    Correct segregation helps make waste
+                    collection and recycling more effective.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            EcoSort
+            <span>•</span>
+            Smart Waste Segregation
+
+        </footer>
+
+
+    </div>
+
+    <!-- SUCCESS TOAST -->
+<div class="toast" id="successToast">
+
+    <div class="toast-icon">
+        ✓
+    </div>
+
+    <div class="toast-content">
+
+        <strong>
+            Congratulations! 🌱
+        </strong>
+
+        <span>
+            You're helping keep the environment clean.
+        </span>
+
+    </div>
+
+    <button
+        class="toast-close"
+        id="toastClose"
+        aria-label="Close notification"
+    >
+        ×
+    </button>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
