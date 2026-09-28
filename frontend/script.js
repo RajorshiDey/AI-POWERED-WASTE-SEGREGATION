@@ -36,6 +36,8 @@ const errorBox =
 const charCount =
     document.getElementById("charCount");
 
+const binDisplay = document.getElementById("binDisplay");
+
 const binName =
     document.getElementById("binName");
 
@@ -306,17 +308,19 @@ function displayResult(data) {
         data.reason ??
         "No explanation was provided.";
 
-    if (bin === "Not a garbage") {
+
+    if (bin == "not a garbage") {
         binName.textContent =
             formatText(bin);
 
-        binColor.style.display=null 
-        colorName.style.display = null;
+        binDisplay.style.display="none";
 
         reasonText.textContent =
             reason;
 
     } else {
+
+        binDisplay.style.display = "flex";
         // ----------------------------------------
         // BIN NAME
         // ----------------------------------------
