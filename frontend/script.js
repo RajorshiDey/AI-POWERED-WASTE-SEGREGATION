@@ -2,7 +2,7 @@
 // API CONFIGURATION
 // ============================================
 
-const API_URL = "https://ai-powered-waste-segregation.onrender.com";
+const API_URL = "";
 
 
 // ============================================
