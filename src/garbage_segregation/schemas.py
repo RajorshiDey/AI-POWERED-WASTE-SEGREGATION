@@ -3,7 +3,7 @@ from typing import Literal
 
 class AIResponse(BaseModel):
     # dustbin_colour: Literal["green","blue","yellow","red"]
-    category: Literal["wet","dry","sanitary","special-care","not a gargbage"]
+    category: Literal["wet","dry","sanitary","special-care","not a garbage"]
     reason: str
 
 
