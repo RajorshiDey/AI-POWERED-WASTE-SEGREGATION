@@ -24,7 +24,8 @@ def llm_call(query: str) -> Response:
         "wet": "green",
         "dry": "blue",
         "sanitary": "yellow",
-        "special-care": "red"
+        "special-care": "red",
+        "Not a gargbage": "grey"
     }
 
     result["dustbin_colour"] = COLOUR_MAP[result["category"]] 

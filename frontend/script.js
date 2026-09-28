@@ -311,6 +311,10 @@ function displayResult(data) {
             formatText(bin);
 
         binColor.style.display=null 
+        colorName.style.display = null;
+
+        reasonText.textContent =
+            reason;
 
     } else {
         // ----------------------------------------
