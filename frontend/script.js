@@ -2,7 +2,7 @@
 // API CONFIGURATION
 // ============================================
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://ai-powered-waste-segregation.onrender.com";
 
 
 // ============================================
@@ -306,48 +306,56 @@ function displayResult(data) {
         data.reason ??
         "No explanation was provided.";
 
+    if (bin === "Not a garbage") {
+        binName.textContent =
+            formatText(bin);
+
+        binColor.style.display=null 
+
+    } else {
+        // ----------------------------------------
+        // BIN NAME
+        // ----------------------------------------
+
+        binName.textContent =
+            formatText(bin);
 
 
-    // ----------------------------------------
-    // BIN NAME
-    // ----------------------------------------
+        // ----------------------------------------
+        // BIN CIRCLE COLOR
+        // ----------------------------------------
 
-    binName.textContent =
-        formatText(bin);
-
-
-    // ----------------------------------------
-    // BIN CIRCLE COLOR
-    // ----------------------------------------
-
-    binColor.style.background =
-        color;
+        binColor.style.background =
+            color;
 
 
-    binColor.style.boxShadow =
-        `
+        binColor.style.boxShadow =
+            `
         0 0 45px ${color},
         0 0 90px ${color}
         `;
 
 
-    // ----------------------------------------
-    // COLOR NAME
-    // ----------------------------------------
+        // ----------------------------------------
+        // COLOR NAME
+        // ----------------------------------------
 
-    colorName.textContent =
-        color;
-
-
-    // ----------------------------------------
-    // REASON
-    // ----------------------------------------
-
-    reasonText.textContent =
-        reason;
+        colorName.textContent =
+            color;
 
 
-   
+        // ----------------------------------------
+        // REASON
+        // ----------------------------------------
+
+        reasonText.textContent =
+            reason;
+
+
+
+    }
+
+
     // ----------------------------------------
     // SHOW RESULT
     // ----------------------------------------
