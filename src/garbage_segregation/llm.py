@@ -41,12 +41,13 @@ def llm_call(query: str) -> Response:
     )
 
     result = result.model_dump()
+    print(result)
     COLOUR_MAP = {
         "wet": "green",
         "dry": "blue",
         "sanitary": "yellow",
         "special-care": "red",
-        "Not a gargbage": "grey"
+        "not a garbage": "grey"
     }
 
     result["dustbin_colour"] = COLOUR_MAP[result["category"]] 
